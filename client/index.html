@@ -14,8 +14,10 @@
          <div class="card-body">
              <h5 class="card-title">Тестик</h5>
              <p class="card-text">{{ headers[count - 1] }}</p>
-             <button class="btn-primary" @click="answers.push(1); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; count += 1">Да</button>
-             <button class="btn-primary" @click="answers.push(0); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; count += 1">Нет</button>
+             <button class="btn-primary" v-if="count < 4" @click="answers.push(1); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; count += 1">Да</button>
+             <button class="btn-primary" v-if="count < 4" @click="answers.push(0); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; count += 1">Нет</button>
+             <button class="btn-primary" v-if="count == 4" @click="answers.push(1); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; sendData(); count += 1">Да</button>
+             <button class="btn-primary" v-if="count == 4" @click="answers.push(0); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; sendData(); count += 1">Нет</button>
              <p>{{ count }} / 4</p>
          </div>
      </div>
