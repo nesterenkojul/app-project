@@ -27,7 +27,6 @@ new Vue({
             const res = await fetch(request);
             const info = await res.json();
             this.info = info;
-            console.log("Data sent")
         }
     }
 })
