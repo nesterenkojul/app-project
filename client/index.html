@@ -10,22 +10,27 @@
 <body>
  
     <div class="container pt-3" id="card">
-     <div class="card mb-3" v-if="count < 5">
+     <div class="card mb-3" v-if="count < 16">
          <div class="card-body">
              <h5 class="card-title">Тестик</h5>
-             <p class="card-text">{{ headers[count - 1] }}</p>
-             <button class="btn-primary" v-if="count < 4" @click="answers.push(1); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; count += 1">Да</button>
-             <button class="btn-primary" v-if="count < 4" @click="answers.push(0); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; count += 1">Нет</button>
-             <button class="btn-primary" v-if="count == 4" @click="answers.push(1); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; sendData(); count += 1">Да</button>
-             <button class="btn-primary" v-if="count == 4" @click="answers.push(0); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; sendData(); count += 1">Нет</button>
-             <p>{{ count }} / 4</p>
+             <p class="card-text">{{ texts[count - 1] }}</p>
+             <button class="btn-primary" v-if="count < 15" @click="answers.push('Нейросеть'); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; count += 1">Нейросеть</button>
+             <button class="btn-primary" v-if="count < 15" @click="answers.push('Человек'); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; count += 1">Человек</button>
+             <button class="btn-primary" v-if="count == 15" @click="answers.push('Нейросеть'); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; sendData(); count += 1">Нейросеть</button>
+             <button class="btn-primary" v-if="count == 15" @click="answers.push('Человек'); guessed += (answers[count - 1] == rightanswers[count - 1]) ? 1 : 0; sendData(); count += 1">Человек</button>
+             <p>{{ count }} / 15</p>
          </div>
      </div>
 
-     <div class="card mb-3" v-if="count == 5">
+     <div class="card mb-3" v-if="count == 16">
         <div class="card-body">
             <h5 class="card-title">Результаты</h5>
-            <p class="card-text">Вы угадали {{ guessed }}/4</p>
+            <p class="card-text">Вы угадали {{ guessed }}/15</p>
+            <p class="card-text" v-if="guessed <= 3">Кажется, нейросеть может легко обвести вас вокруг пальца</p> 
+            <p class="card-text" v-if="3 < guessed && guessed <= 6">Похоже, наша нейросеть неплохо справляется</p> 
+            <p class="card-text" v-if="6 < guessed && guessed <= 9">В некоторых случаях нашей нейросети всё-таки удалось вас перехитрить</p> 
+            <p class="card-text" v-if="9 < guessed && guessed <= 12">Вы неплохо различаете реального HR-а и компьютерного</p> 
+            <p class="card-text" v-if="12 < guessed">У вас определенно есть чутье на нейросети</p> 
         </div>
     </div>
 </div>
