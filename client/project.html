@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title> Data Science Project </title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="image"> <img src="img/win.svg"> </div>
+            <p class="headertext"> Курсовая работа </p> <p class="headertext" style="color: #BAFFE6"> Data Science Dream Team </p>
+        </header>
+
+        <main>
+            <div class="vved">
+                <div class="vvedtext" data-aos="fade-left">
+                    <h1> Сможете ли Вы отличить ИИ от настоящего HR? </h1>
+                    <h2> Результаты работы нашей команды прекрасно иллюстрируют, как с этим справились другие </h2>
+                    <div class="button"> <p> Узнать больше <p> </div>
+                </div>
+                <div class="run" data-aos="fade-left"> <img src="img/run3.svg"> </div>
+            </div>
+
+            <div class="goals" data-aos="fade-left">
+                <h1 class="goaltext"> Наша цель: </h1>
+                <h1 class="goaltext"> Оценка нейросетей для генерации текста </h1>
+                <div class="floatpic bounce-2"> <img src="img/float.svg"> </div>
+            </div>
+
+            <div class="grathtext" data-aos="fade-right">
+                <div class="coltext">
+                    <div id="rowtext"> <h1 id="goalhead"> Инфографики  </h1> <div class="arrowicon"> <img src="img/arrow2.svg" class="shadow"> </div> </div>
+                    <h2 id="goalheadmini"> Сведения о датасетах и начальных данных </h2>
+                </div>
+            </div>
+
+            <div class="grath1">
+                <h2 class="grath1text" data-aos="fade-up"> Сравним количество сообщений в каждом датасете: </h2>
+
+                <div class="chart1" data-aos="fade-down">
+                    <canvas id="myChart"> </canvas>
+                </div>
+            </div>
+
+            <div class="grath2">
+
+                <div class="container" data-aos="fade-down">
+                    <canvas id="myChart1" width="600" height="400"></canvas>
+                </div>
+
+
+                <h2 class="grath1text" data-aos="fade-up">
+                    >
+                    Любому алгоритму машинного обучения
+                    или нейросети нужны данные.  Предоставленные
+                    графики отразят объемы анализируемой
+                    информации.
+                </h2>
+            </div>
+
+
+            <div class="quizbox" data-aos="fade-left">
+                <h1 class="quizmaintext"> Результаты опроса </h1>
+                <h1 class="quizmaintext"> Здесь: </h1>
+
+                <div class="numcont">
+                    <div class="numbox" data-aos="fade-up">
+                        <p class="num"> 234 </p>
+                        <p class="numtext">
+                            Количество
+                        </p>
+                        <p class="numtext">
+                            сгенерированных
+                        </p>
+                        <p class="numtext">
+                            сообщений
+                        </p>
+                    </div>
+
+
+                    <div class="numbox" data-aos="fade-down">
+                        <p class="num"> 103 </p>
+                        <p class="numtext" style="color: #A5A6F6;">
+                            Количество
+                        </p>
+                        <p class="numtext" style="color: #A5A6F6;">
+                            угаданных
+                        </p>
+                        <p class="numtext" style="color: #A5A6F6;">
+                            сообщений
+                        </p>
+                    </div>
+                </div>
+
+
+ <!--               <div class="ourquiz" data-aos="fade-up">
+                    <h2 class="ourquiztext"> Хотели бы попробовать тоже?</h2>
+
+                    <div class="thequiz" id="card">
+                        <p class="quizquest"> Данный заголовок создан человеком или ИИ? </p>
+                        <p class="quiztext"> Правительство пообещало отсутствие денег на внутренние дела России </p>
+
+                        <div class="ans"> <p class="ans1"> Нейросеть </p> </div>
+                        <div class="ans"> <p class="ans1"> Человек </p> </div>
+
+
+                    </div>
+                </div> -->
+
+                <!--ОПРОС-->
+                <div class="ourquiz" id="app" data-aos="fade-up">
+                    <h2 class="ourquiztext"> Хотели бы попробовать тоже?</h2>
+                    <div class="thequiz" id="card">
+                        <p class="quizquest"> {{ quiz.title }} </p>
+                        <!-- Индекс используется для проверки текущего индекса вопроса -->
+                        <div v-for="(question, index) in quiz.questions">
+                            <!-- Скрыть все вопросы, показывать только один вопрос с текущим индексом -->
+                            <div v-show="index === questionIndex">
+                                <p class="quiztext"> {{ question }} </p>
+
+
+
+                                    <div class="ans" @click="addneuro">
+
+                                        <p class="ans1"> Нейросеть </p>
+
+                                    </div>
+
+                                    <div class="ans" @click="addman">
+                                        <p class="ans1"> Человек </p>
+                                    </div>
+</div>
+
+                        </div>
+                        <div v-show="questionIndex === quiz.questions.length">
+                            <h1 class="res">
+                                Викторина завершена!
+                            </h1>
+                            <p class="result">
+                                Счет: {{ score() }} / {{ quiz.questions.length }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+</main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+
+        AOS.init({
+            duration: 1000
+        });
+    </script>
+</body>
+</html>
