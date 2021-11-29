@@ -22,12 +22,13 @@
                 <div class="vvedtext" data-aos="fade-left">
                     <h1> Сможете ли Вы отличить ИИ от настоящего HR? </h1>
                     <h2> Результаты работы нашей команды прекрасно иллюстрируют, как с этим справились другие </h2>
-                    <div class="button"> <p> Узнать больше <p> </div>
-                </div>
+                    <a href="#top" style="text-decoration: none; "> <div class="button"> <p> Узнать больше <p> </div> </a>
+</div>
                 <div class="run" data-aos="fade-left"> <img src="img/run3.svg"> </div>
             </div>
 
             <div class="goals" data-aos="fade-left">
+                <p><a name="top"></a></p>
                 <h1 class="goaltext"> Наша цель: </h1>
                 <h1 class="goaltext"> Оценка нейросетей для генерации текста </h1>
                 <div class="floatpic bounce-2"> <img src="img/float.svg"> </div>
@@ -126,16 +127,18 @@
 
 
 
-                                    <div class="ans" @click="addneuro">
+                                <div class="ans" @click="addneuro">
 
-                                        <p class="ans1"> Нейросеть </p>
+                                    <p class="ans1"> Нейросеть </p>
 
-                                    </div>
+                                </div>
 
-                                    <div class="ans" @click="addman">
-                                        <p class="ans1"> Человек </p>
-                                    </div>
-</div>
+                                <div class="ans" @click="addman">
+                                    <p class="ans1"> Человек </p>
+                                </div>
+
+                                <p class="counter"> {{ index+1 }} /  {{ quiz.questions.length }} </p>
+                            </div>
 
                         </div>
                         <div v-show="questionIndex === quiz.questions.length">
@@ -145,7 +148,21 @@
                             <p class="result">
                                 Счет: {{ score() }} / {{ quiz.questions.length }}
                             </p>
+
+                            <!--Тут кнопка для завершения!!-->
+                            <div class="button2" id="onetime" @click="next"> <p> Завершить опрос <p> </div>
+
                         </div>
+
+                        <div v-show="questionIndex === quiz.questions.length+1">
+                            <h1 class="res">
+                                Спасибо за участие!
+                            </h1>
+
+                            <div class="floatpic2 bounce-3"> <img src="img/float2.svg"> </div>
+
+                        </div>
+
                     </div>
                 </div>
 
