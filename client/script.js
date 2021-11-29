@@ -106,18 +106,9 @@ new Vue({
         }
     }
 });
-
-//                            <ol>
-                          //      < !--Для каждого ответа текущего вопроса-- >
-   // <div v-for="response in question.responses">
-     //   <!-- Радио-кнопка имеет 3 новые директивы -->
-       //                                 <!-- v-bind:value устанавливает "value" в значение "true" если ответ правильный -->
-         //                               <!-- v-bind:name устанавливает "name" в значение индекса вопроса для группировки ответов по вопросу -->
-           //                             <!-- v-model создает связь с userResponses -->
-  //                                      <div class="ans" v-on:click="usans.push(response.correct)"
-    //        v-bind:value="response.correct"
-      //      v-bind:name="index"
-        //    v-model="userResponses[index]"> {{ response.text }}
- //       </div>
- //   </div>
-   //                         </ol > //
+//это функция чтобы кнопку можно было нажать только один раз
+window.onload = function () {
+    document.getElementById("onetime").onclick = function () {
+        this.disabled = 'disabled';
+    }
+}
