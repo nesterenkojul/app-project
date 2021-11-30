@@ -78,11 +78,7 @@ new Vue({
         correctans: ["Человек", "Нейросеть", "Человек", "Нейросеть", "Человек", "Нейросеть", "Человек", "Нейросеть", "Человек", "Нейросеть", "Человек", "Нейросеть", "Человек", "Нейросеть", "Человек"]
     },
     methods: {
-        // Перейти к следующему вопросу
-        next: function () {
-            this.questionIndex++;
-        },
-        // Вернуться к предыдущему вопросу
+       // Вернуться к предыдущему вопросу
         prev: function () {
             this.questionIndex--;
         },
@@ -103,7 +99,25 @@ new Vue({
         addman: function () {
             this.usansw.push("Человек");
             this.questionIndex++;
-        }
+        },
+        async sendData() {
+            const request = new Request(
+                "http://localhost:3000/",
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ Текст1: this.usansw[0], Текст2: this.usansw[1], 
+                    Текст3: this.usansw[2], Текст4: this.usansw[3], Текст5: this.usansw[4],
+                    Текст6: this.usansw[5], Текст7: this.usansw[6], Текст8: this.usansw[7],
+                    Текст9: this.usansw[8], Текст10: this.usansw[9], Текст11: this.usansw[10],
+                    Текст12: this.usansw[11], Текст13: this.usansw[12], Текст14: this.usansw[13],
+                    Текст15: this.usansw[14], Угадано: String(this.score()).concat("/15")})
+                }
+            );
+            const res = await fetch(request);
+            const info = await res.json();
+            this.questionIndex++;
+        } 
     }
 });
 //это функция чтобы кнопку можно было нажать только один раз

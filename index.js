@@ -15,7 +15,7 @@ app.use(express.static(path.resolve(__dirname, 'client')))
 
 setTimeout(function(){
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'index.html'))
+    res.sendFile(path.resolve(__dirname, 'client', 'project.html'))
 })}, 100)
 
 app.post('/', async (req, res) => {
