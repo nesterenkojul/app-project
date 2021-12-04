@@ -72,6 +72,9 @@ var quiz = {
 new Vue({
     el: '#app',
     data: {
+        show: true,
+        num_1: '289',
+        num_2: '181',
         quiz: quiz,
         questionIndex: 0,
         usansw: [],
