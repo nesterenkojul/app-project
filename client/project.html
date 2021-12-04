@@ -66,13 +66,14 @@
             </div>
 
 
+        <div id="app">
             <div class="quizbox" data-aos="fade-left">
                 <h1 class="quizmaintext"> Результаты опроса </h1>
                 <h1 class="quizmaintext"> Здесь: </h1>
 
                 <div class="numcont">
                     <div class="numbox" data-aos="fade-up">
-                        <p class="num"> 234 </p>
+                        <p class="num"> {{ num_1 }} </p>
                         <p class="numtext">
                             Количество
                         </p>
@@ -86,7 +87,7 @@
 
 
                     <div class="numbox" data-aos="fade-down">
-                        <p class="num"> 103 </p>
+                        <p class="num"> {{ num_2 }} </p>
                         <p class="numtext" style="color: #A5A6F6;">
                             Количество
                         </p>
@@ -100,20 +101,6 @@
                 </div>
 
 
- <!--               <div class="ourquiz" data-aos="fade-up">
-                    <h2 class="ourquiztext"> Хотели бы попробовать тоже?</h2>
-
-                    <div class="thequiz" id="card">
-                        <p class="quizquest"> Данный заголовок создан человеком или ИИ? </p>
-                        <p class="quiztext"> Правительство пообещало отсутствие денег на внутренние дела России </p>
-
-                        <div class="ans"> <p class="ans1"> Нейросеть </p> </div>
-                        <div class="ans"> <p class="ans1"> Человек </p> </div>
-
-
-                    </div>
-                </div> -->
-
                 <!--ОПРОС-->
                 <div class="ourquiz" id="app" data-aos="fade-up">
                     <h2 class="ourquiztext"> Хотели бы попробовать тоже?</h2>
@@ -126,16 +113,28 @@
                                 <p class="quiztext"> {{ question }} </p>
 
 
-
-                                <div class="ans" @click="addneuro">
-
-                                    <p class="ans1"> Нейросеть </p>
-
+                                <div v-if="correctans[index]==='Нейросеть'">
+                                    <div class="ans bounce-4" @click="addneuro">
+                                        <p class="ans1"> Нейросеть </p>
+                                    </div>
+                                </div>
+                                <div v-else>
+                                    <div class="ans shake" @click="addneuro">
+                                        <p class="ans1"> Нейросеть </p>
+                                    </div>
                                 </div>
 
-                                <div class="ans" @click="addman">
-                                    <p class="ans1"> Человек </p>
+                                <div v-if="correctans[index]==='Человек'">
+                                    <div class="ans bounce-4" @click="addman">
+                                        <p class="ans1"> Человек </p>
+                                    </div>
                                 </div>
+                                <div v-else>
+                                    <div class="ans shake" @click="addman">
+                                        <p class="ans1"> Человек </p>
+                                    </div>
+                                </div>
+
 
                                 <p class="counter"> {{ index+1 }} /  {{ quiz.questions.length }} </p>
                             </div>
@@ -151,7 +150,6 @@
 
                             <!--Тут кнопка для завершения!!-->
                             <div class="button2" id="onetime" @click="sendData()"> <p> Завершить опрос <p> </div>
-
                         </div>
 
                         <div v-show="questionIndex === quiz.questions.length+1">
@@ -161,10 +159,13 @@
 
                             <div class="floatpic2 bounce-3"> <img src="img/float2.svg"> </div>
 
+
                         </div>
 
                     </div>
                 </div>
+            </div>
+          </div>
 
 
 </main>
