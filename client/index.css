@@ -534,3 +534,109 @@ h2 {
         transform: translateY(0);
     }
 }
+
+
+
+@keyframes shake {
+    0% {
+         transform: translate(2px, 1px) rotate(0deg);
+    }
+
+    10% {
+         transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+         transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+         transform: translate(0px, 2px) rotate(0deg);
+    }
+
+    40% {
+         transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+         transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+         transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+         transform: translate(2px, 1px) rotate(-1deg);
+    }
+
+    80% {
+         transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+         transform: translate(2px, 2px) rotate(0deg);
+    }
+
+    100% {
+         transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.shake:active,
+.shake:focus {
+    animation-name: shake;
+    animation-duration: 0.2s;
+    transform-origin: 50% 50%;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    background: #e87968;
+    box-shadow: inset 30.5em 0 0 0 #e87968;
+    transition: 0.4s;
+    color: #e87968;
+}
+
+
+.bounce-4:focus,
+.bounce-4:active {
+    animation-name: bounce-4;
+    animation-duration: 0.4s;
+    transform-origin: 50% 50%;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    background: #15bfb9;
+    box-shadow: inset 30.5em 0 0 0 #15bfb9;
+    transition: 0.4s;
+    color: #15bfb9;
+}
+
+
+@keyframes bounce-4 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.datainfo {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#datatext {
+    font-family: 'Inter', 'Bellota Text';
+    font-style: normal;
+    font-size: 28px;
+    line-height: 50px;
+    cursor: default;
+    color: #99EFD0;
+    text-align: center;
+}
