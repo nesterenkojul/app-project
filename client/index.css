@@ -232,25 +232,57 @@ h2 {
     display: flex;
     flex-direction: row;
     background: url(img/stars.png) no-repeat;
+    margin-bottom: 50px;
 }
 
 .grath2 {
     display: flex;
     flex-direction: row;
     margin-left: 90px;
+    margin-bottom: 50px;
 }
 
+.grath3 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 90px;
+    margin-bottom: 50px;
+    background: url(img/stars2.svg) no-repeat;
+}
+
+
+.grath4 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 90px;
+    margin-bottom: 50px;
+    background: url(img/stars3.svg) no-repeat;
+}
 
 .grath1text {
     width: 350px;
     font-family: 'Inter', 'Bellota Text';
     font-style: normal;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 40px;
     line-height: 50px;
     cursor: default;
     color: #99EFD0;
     margin-left: 90px;
+    margin-top: 200px;
+}
+
+.grath4text {
+    width: 350px;
+    font-family: 'Inter', 'Bellota Text';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    cursor: default;
+    color: #8476AA;
+    margin-left: 90px;
+    margin-top: 30px;
 }
 
 .chart1 {
@@ -628,15 +660,60 @@ h2 {
 .datainfo {
     display: flex;
     flex-direction: column;
-
+    align-items: center;
 }
 
 #datatext {
     font-family: 'Inter', 'Bellota Text';
     font-style: normal;
-    font-size: 28px;
+    font-size: 36px;
     line-height: 50px;
     cursor: default;
-    color: #99EFD0;
+    color: #8476AA;
     text-align: center;
+    margin-bottom: 50px;
+}
+
+.databox {
+    width: 686px;
+    height: 60px;
+    background: #354A8E;
+    border-radius: 100px;
+    margin-bottom: 50px;
+    animation-direction: reverse
+}
+
+    .databox:hover,
+    .databox:active {
+        transform: translateX(-0.8em);
+        transition: 0.4s;
+        box-shadow: 1px 1px #13C296, 2px 2px #13C296, 3px 3px #13C296, 4px 4px #13C296, 5px 5px #13C296, 6px 6px #13C296, 7px 7px #13C296;
+    }
+
+.databoxtext {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 42px;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+    padding-left: 15px;
+    padding-top: -3px;
+    margin-top: -3px;
+    margin-bottom: -5px;
+    padding-bottom: -5px;
+}
+
+.subdataboxtext {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #8476AA;
+    padding-top: 0px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    margin-top: 0px;
+    padding-left: 15px;
 }
