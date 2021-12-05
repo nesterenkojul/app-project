@@ -4,10 +4,10 @@ let massPopChart = new Chart(myChart, {
 
     type: 'line',
     data: {
-        labels: ['Датасет 1', 'Датасет 2', 'Датасет 3', 'Датасет 4'],
+        labels: ['Нейросеть 1', 'Нейросеть 2', 'Нейросеть 3', 'Нейросеть 4'],
         datasets: [{
-            label: 'Количество сообщений',
-            data: [6346, 70, 6134, 67],
+            label: 'Результат',
+            data: [0.4, 0.7, 0.6, 0.7],
             backgroundColor: ['#99EFD0', '#F2994A', '#8476AA', '#3AB7D2'],
             hoverBackgroundColor: ['#C2FFE2', '#FFC690', '#EEBCFF', '#8BEAFF'],
             borderColor: '#C2FFE2',
@@ -19,9 +19,9 @@ let massPopChart = new Chart(myChart, {
             tension: {
                 duration: 6000,
                 easing: 'linear',
-                from: 1,
+                from: 0,
                 to: 0,
-                loop: true
+                loop: false
             }
         }
     }
@@ -31,10 +31,10 @@ var ctx = document.getElementById('myChart1').getContext('2d');
 var myChart1 = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Датасет 1', 'Датасет 2'],
+        labels: ['Нейросеть 1', 'Нейросеть 2', 'Нейросеть 3', 'Нейросеть 4'],
         datasets: [{
-            label: 'Количество сообщений:',
-            data: [6346, 6134],
+            label: 'Результат:',
+            data: [0.7, 0.3, 0.6, 0.5],
             backgroundColor: [
                 '#F2994A',
                 '#8476AA'
@@ -46,6 +46,149 @@ var myChart1 = new Chart(ctx, {
         legend: {
             display: false
         },
+        title: {
+            display: true,
+            text: 'Два наибольших датасета:',
+            position: 'top',
+            fontSize: 16,
+            padding: 20
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 75
+                }
+            }]
+        }
+    }
+});
+
+
+var ctx = document.getElementById('myChart2').getContext('2d');
+var myChart2 = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Нейросеть 1', 'Нейросеть 2', 'Нейросеть 3', 'Нейросеть 4'],
+        datasets: [{
+            label: 'Результат:',
+            data: [0.4, 0.5, 0.3, 0.7],
+            backgroundColor: [
+                '#F2994A',
+                '#8476AA'
+            ],
+            hoverBackgroundColor: ['#FFC690', '#EEBCFF']
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: 'Два наибольших датасета:',
+            position: 'top',
+            fontSize: 16,
+            padding: 20
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 75
+                }
+            }]
+        }
+    }
+});
+
+var ctx = document.getElementById('myChart3').getContext('2d');
+var myChart3 = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Нейросеть 1', 'Нейросеть 2', 'Нейросеть 3', 'Нейросеть 4'],
+        datasets: [{
+            label: 'Результат:',
+            data: [0.4, 0.8, 0.6, 0.7],
+            backgroundColor: [
+                "rgba(255, 84, 84, 0.5)",
+                'rgba(219, 150, 66, 0.5)',
+                'rgba(142, 113, 227, 0.5)',
+                'rgba(94, 255, 207, 0.5)',
+            ],
+            borderColor: '#C2FFE2',
+            hoverBackgroundColor: ["#f7436a", '#FFC690', '#EEBCFF', "#61ffc0"]
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: false,
+                text: ''
+            }
+        },
+        indexAxis: 'y',
+        title: {
+            display: true,
+            text: 'Два наибольших датасета:',
+            position: 'top',
+            fontSize: 16,
+            padding: 20
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 75
+                }
+            }]
+        }
+    }
+});
+
+
+var ctx = document.getElementById('myChart4').getContext('2d');
+var myChart4 = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Метрика 1', 'Метрика 2', 'Метрика 3', 'Метрика 4'],
+        datasets: [{
+            label: 'Текст человека',
+            data: [0.4, 0.8, 0.6, 0.7],
+            backgroundColor: [
+                "#f7436a",
+                'rgba(219, 150, 66, 0.5)',
+                'rgba(142, 113, 227, 0.5)',
+                'rgba(94, 255, 207, 0.5)',
+            ],
+            borderColor: '#f7436a',
+            hoverBackgroundColor: ["#f7436a", '#FFC690', '#EEBCFF', "#61ffc0"]
+        },
+            {
+                label: 'Текст нейросети:',
+                data: [0.3, 0.7, 0.1, 0.9],
+                backgroundColor: [
+                    "#EEBCFF",
+                    '#EEBCFF',
+                    'rgba(142, 113, 227, 0.5)',
+                    'rgba(94, 255, 207, 0.5)',
+                ],
+                borderColor: '#EEBCFF',
+                hoverBackgroundColor: ["#f7436a", '#FFC690', '#EEBCFF', "#61ffc0"]
+            }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: false,
+                text: ''
+            }
+        },
+        indexAxis: 'x',
         title: {
             display: true,
             text: 'Два наибольших датасета:',
