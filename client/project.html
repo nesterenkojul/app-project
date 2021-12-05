@@ -41,8 +41,20 @@
                 </div>
             </div>
 
+            <div class="grath2">
+
+                <div class="container" data-aos="fade-down">
+                    <canvas id="myChart1" width="600" height="400"></canvas>
+                </div>
+
+
+                <h2 class="grath1text" data-aos="fade-up">
+                    Степень академической тошноты
+                </h2>
+            </div>
+
             <div class="grath1">
-                <h2 class="grath1text" data-aos="fade-up"> Сравним количество сообщений в каждом датасете: </h2>
+                <h2 class="grath1text" data-aos="fade-up"> Степень водности </h2>
 
                 <div class="chart1" data-aos="fade-down">
                     <canvas id="myChart"> </canvas>
@@ -52,53 +64,72 @@
             <div class="grath2">
 
                 <div class="container" data-aos="fade-down">
-                    <canvas id="myChart1" width="600" height="400"></canvas>
+                    <canvas id="myChart2" width="600" height="400"></canvas>
                 </div>
 
 
                 <h2 class="grath1text" data-aos="fade-up">
-                    >
-                    Любому алгоритму машинного обучения
-                    или нейросети нужны данные.  Предоставленные
-                    графики отразят объемы анализируемой
-                    информации.
+                    Степень повторенности
                 </h2>
             </div>
 
+            <div class="grath3">
 
-        <div id="app">
-            <div class="quizbox" data-aos="fade-left">
-                <h1 class="quizmaintext"> Результаты опроса </h1>
-                <h1 class="quizmaintext"> Здесь: </h1>
+                <h2 class="grath1text" data-aos="fade-right">
+                    Индекс Флеша
+                </h2>
 
-                <div class="numcont">
-                    <div class="numbox" data-aos="fade-up">
-                        <p class="num"> {{ num_1 }} </p>
-                        <p class="numtext">
-                            Количество
-                        </p>
-                        <p class="numtext">
-                            сгенерированных
-                        </p>
-                        <p class="numtext">
-                            сообщений
-                        </p>
-                    </div>
-
-
-                    <div class="numbox" data-aos="fade-down">
-                        <p class="num"> {{ num_2 }} </p>
-                        <p class="numtext" style="color: #A5A6F6;">
-                            Количество
-                        </p>
-                        <p class="numtext" style="color: #A5A6F6;">
-                            угаданных
-                        </p>
-                        <p class="numtext" style="color: #A5A6F6;">
-                            сообщений
-                        </p>
-                    </div>
+                <div class="container" data-aos="fade-left">
+                    <canvas id="myChart3" width="600" height="400"></canvas>
                 </div>
+
+
+            </div>
+
+            <div class="grath4">
+
+                <div class="container" data-aos="fade-left">
+                    <canvas id="myChart4" width="600" height="400"></canvas>
+                </div>
+
+                <h2 class="grath4text" data-aos="fade-right">
+                    Сравним результаты текстов, написанных человеком, и текстов, сгенерированных нейросетью
+                </h2>
+
+            </div>
+
+
+
+            <div id="app">
+                <div class="quizbox" data-aos="fade-left">
+                    <h1 class="quizmaintext"> Результаты опроса </h1>
+                    <h1 class="quizmaintext"> Здесь: </h1>
+
+                    <div class="numcont">
+                        <div class="numbox" data-aos="fade-up">
+                            <p class="num"> {{ num_1 }}% </p>
+                            <p class="numtext">
+                                Процент
+                            </p>
+                            <p class="numtext">
+                                угаданных
+                            </p>
+                            <p class="numtext">
+                                сообщений
+                            </p>
+                        </div>
+
+
+                        <div class="numbox" data-aos="fade-down">
+                            <p class="num"> {{ num_2 }}% </p>
+                            <p class="numtext" style="color: #A5A6F6;">
+                                Процент
+                            </p>
+                            <p class="numtext" style="color: #A5A6F6;">
+                                Отклика
+                            </p>
+                        </div>
+                    </div>
 
 
                 <!--ОПРОС-->
