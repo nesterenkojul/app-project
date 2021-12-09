@@ -711,6 +711,67 @@ h2 {
     padding-left: 15px;
 }
 
+.datanum {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+    padding-left: 240px;
+    padding-top: 9px;
+    margin-top: -3px;
+    margin-bottom: -5px;
+    padding-bottom: -5px;
+}
+
+
+.datanum2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+    padding-left: 240px;
+    padding-top: 9px;
+    margin-top: -3px;
+    margin-bottom: -5px;
+    padding-bottom: -5px;
+}
+
+.datanum3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+    padding-left: 110px;
+    padding-top: 9px;
+    margin-top: -3px;
+    margin-bottom: -5px;
+    padding-bottom: -5px;
+}
+
+.datanum4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+    padding-left: 210px;
+    padding-top: 9px;
+    margin-top: -3px;
+    margin-bottom: -5px;
+    padding-bottom: -5px;
+}
+
 .diffheader {
     font-size: 34px;
     text-align: center;
@@ -795,7 +856,6 @@ h2 {
 .row {
     display: flex;
     flex-direction: row;
-    align-content: space-around;
 }
 
 .circle {
