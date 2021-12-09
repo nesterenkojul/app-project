@@ -148,64 +148,6 @@ var myChart3 = new Chart(ctx, {
 });
 
 
-var ctx = document.getElementById('myChart4').getContext('2d');
-var myChart4 = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Метрика 1', 'Метрика 2', 'Метрика 3', 'Метрика 4'],
-        datasets: [{
-            label: 'Текст человека',
-            data: [0.4, 0.8, 0.6, 0.7],
-            backgroundColor: [
-                "#f7436a",
-                'rgba(219, 150, 66, 0.5)',
-                'rgba(142, 113, 227, 0.5)',
-                'rgba(94, 255, 207, 0.5)',
-            ],
-            borderColor: '#f7436a',
-            hoverBackgroundColor: ["#f7436a", '#FFC690', '#EEBCFF', "#61ffc0"]
-        },
-            {
-                label: 'Текст нейросети:',
-                data: [0.3, 0.7, 0.1, 0.9],
-                backgroundColor: [
-                    "#EEBCFF",
-                    '#EEBCFF',
-                    'rgba(142, 113, 227, 0.5)',
-                    'rgba(94, 255, 207, 0.5)',
-                ],
-                borderColor: '#EEBCFF',
-                hoverBackgroundColor: ["#f7436a", '#FFC690', '#EEBCFF', "#61ffc0"]
-            }]
-    },
-    options: {
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: false,
-                text: ''
-            }
-        },
-        indexAxis: 'x',
-        title: {
-            display: true,
-            text: 'Два наибольших датасета:',
-            position: 'top',
-            fontSize: 16,
-            padding: 20
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    min: 75
-                }
-            }]
-        }
-    }
-});
-
 
 var quiz = {
     title: 'Данный заголовок создан человеком или ИИ?',
