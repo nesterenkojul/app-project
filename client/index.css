@@ -251,13 +251,6 @@ h2 {
 }
 
 
-.grath4 {
-    display: flex;
-    flex-direction: row;
-    margin-left: 90px;
-    margin-bottom: 50px;
-    background: url(img/stars3.svg) no-repeat;
-}
 
 .grath1text {
     width: 350px;
@@ -716,4 +709,95 @@ h2 {
     padding-bottom: 25px;
     margin-top: 0px;
     padding-left: 15px;
+}
+
+.diffheader {
+    font-size: 34px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.colorbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.round {
+    margin-top: 10px;
+}
+
+.difftext {
+    color: #FFFFFF;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    cursor: default;
+    padding-left: 9px;
+}
+
+.colorcont {
+    display: flex;
+    flex-direction: row;
+}
+
+.colorcont2 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 8px;
+}
+
+.spr {
+    width: 330px;
+    height: 330px;
+    background: url(img/spr1.svg) no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: -30px;
+}
+
+.neurotext {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 42px;
+    letter-spacing: 0.1px;
+    color: #73FFCD;
+    margin-left: 15px;
+    margin-bottom: 130px;
+}
+
+.mantext {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 90px;
+    line-height: 42px;
+    letter-spacing: 0.1px;
+    color: #FFBEBE;
+    margin-left: 33px;
+    margin-top: 25px;
+}
+
+.sprtext {
+    font-family: 'Inter', 'Bellota Text';
+    font-style: normal;
+    font-size: 38px;
+    line-height: 50px;
+    cursor: default;
+    color: #8476AA;
+    margin-bottom: 50px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+.circle {
+    margin-left: 240px;
 }
