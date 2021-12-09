@@ -80,7 +80,7 @@ var myChart2 = new Chart(ctx, {
         }]
     },
     options: {
-        indexAxis: 'y',
+        indexAxis: 'x',
         legend: {
             display: false
         },
@@ -129,7 +129,7 @@ var myChart3 = new Chart(ctx, {
                 text: ''
             }
         },
-        indexAxis: 'y',
+        indexAxis: 'x',
         title: {
             display: true,
             text: 'Два наибольших датасета:',
