@@ -914,7 +914,7 @@
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1099px) {
 
     body {
         background-color: #0F1145;
@@ -1174,8 +1174,8 @@
     }
 
     .chart1 {
-        width: 450px;
-        height: 250px;
+        width: 900px;
+        height: 500px;
         padding-left: 20px;
     }
 
@@ -1215,14 +1215,14 @@
         }
 
     .numbox {
-        padding-left: 200px;
+        padding-left: 50px;
         display: flex;
         flex-direction: column;
     }
 
     .numcont {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-content: space-between;
     }
 
@@ -1262,9 +1262,8 @@
 
     .thequiz {
         margin-top: 150px;
-        margin-left: 250px;
         background: url(img/quizcard.svg);
-        Width: 868px;
+        Width: 534px;
         max-height: 700px;
         margin-bottom: 70px;
     }
@@ -1573,12 +1572,6 @@
         animation-direction: reverse
     }
 
-        .databox:hover,
-        .databox:active {
-            transform: translateX(-0.8em);
-            transition: 0.4s;
-            box-shadow: 1px 1px #13C296, 2px 2px #13C296, 3px 3px #13C296, 4px 4px #13C296, 5px 5px #13C296, 6px 6px #13C296, 7px 7px #13C296;
-        }
 
     .databoxtext {
         font-family: 'IBM Plex Sans', sans-serif;
@@ -1670,7 +1663,7 @@
     }
 
     .diffheader {
-        font-size: 34px;
+        font-size: 32px;
         text-align: center;
         color: #FFFFFF;
     }
@@ -1711,7 +1704,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-left: 30px;
+        margin-left: 0px;
         margin-top: -30px;
     }
 
@@ -1722,7 +1715,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-left: 30px;
+        margin-left: 0px;
         margin-top: -30px;
     }
 
@@ -1734,7 +1727,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-left: 30px;
+        margin-left: 0px;
         margin-top: -30px;
     }
 
@@ -1746,7 +1739,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-left: 30px;
+        margin-left: 0px;
         margin-top: -30px;
     }
 
@@ -1787,7 +1780,7 @@
 
     .row {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .circle {
@@ -1799,6 +1792,11 @@
         flex-direction: column;
         align-items: center;
         align-content: center;
+    }
+
+    .row2 {
+        display: flex;
+        flex-direction: row;
     }
 
 
