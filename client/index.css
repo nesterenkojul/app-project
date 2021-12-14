@@ -358,6 +358,7 @@
         align-content: center;
         text-align: center;
         align-items: center;
+        background: url(img/Worldmap.svg) no-repeat;
     }
 
     .ourquiztext {
