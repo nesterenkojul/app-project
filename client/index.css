@@ -1789,7 +1789,7 @@
     }
 
     .circle {
-        margin-left: 240px;
+        margin-left: 0px;
     }
 
     .tasks {
@@ -1803,8 +1803,6 @@
         display: flex;
         flex-direction: row;
     }
-
-
 
 
 
