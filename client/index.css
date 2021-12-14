@@ -912,6 +912,11 @@
         align-items: center;
         align-content: center;
     }
+
+    .row2 {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 @media (max-width: 1099px) {
