@@ -358,7 +358,6 @@
         align-content: center;
         text-align: center;
         align-items: center;
-        background: url(img/Worldmap.svg) no-repeat;
     }
 
     .ourquiztext {
@@ -1414,7 +1413,7 @@
         line-height: 150%;
         letter-spacing: 0.01em;
         padding-bottom: 50px;
-        margin-left: 670px;
+        margin-left: 370px;
     }
 
     .floatpic2 {
